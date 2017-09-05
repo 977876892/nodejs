@@ -1,0 +1,58 @@
+- As a Node Developer , we can interact with the MySQL DataBase.
+
+- "mysql" is the driver (module) used to interact with the mysql database.
+
+- we can download "mysql" driver with the help of "npm" 
+
+Ex.
+
+package.json
+-
+{
+    "name":"nareshit",
+    "version":"1.0.0"
+    "description":"MYSQL DB Interaction",
+    "dependencies":{
+        "mysql":"1.7.1"
+    }
+}
+
+>npm install
+
+
+//import mysql
+var mysql = require("mysql");
+
+
+//creating the connection object
+var connection = mysql.createConnection({
+    host:"localhost",
+    user : "root",
+    password:"root",
+    database:"mydb"
+});
+
+//connect to database.
+connection.connect();
+
+- query() is the overloaded method in connection object , used to perform the CRUD Operations.
+
+
+Ex.
+connection.query("create table emp(eno integer,ename varchar(20),esal integer)",function(err,res){
+    if(err){
+        throw err;
+    }
+});
+
+
+connection.query("insert into emp values(111,'Hello_1',20000)",function(err,res){
+    if(err){
+        throw err;
+    }
+});
+
+
+connection.query("select * from emp,function(err,records,fields){
+    console.log(records);
+});

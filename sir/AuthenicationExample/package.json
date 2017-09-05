@@ -1,0 +1,10 @@
+{
+  "name": "token",
+  "version": "1.0.0",
+  "description": "Token Based Authentication System",
+  "dependencies": {
+    "express": "4.15.3",
+    "jwt-simple": "^0.5.1",
+    "mongodb": "^2.2.29"
+  }
+}

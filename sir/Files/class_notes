@@ -1,0 +1,24 @@
+1.createWriteStream(String filename)
+    - this is used to create and opens the file to write the data.
+
+
+2. write()
+
+    - it is used to write the data to the file.
+
+3. close()
+
+    - it is used to close the stream object.
+
+4.readFile()
+
+    - it is used to read the data asyncronously.
+
+5.readFileSync()
+    - it is used to read the file Syncronously.                
+
+6.unlink()
+    - delete the files asyncronously.
+
+7.unlinkSync()
+    - delete the files Syncronously.        

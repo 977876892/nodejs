@@ -1,0 +1,46 @@
+"fs" module is the predefined module in nodejs.
+
+"fs" module used to perform the file operations on "static files".
+
+    Ex.
+        Static Text Files.
+
+        Static JSON Files
+        
+        Static XML Files
+
+        --
+        --
+        --
+
+we can perform the file operations in two ways.
+
+1. Synchronously
+2. Asynchronously        
+
+
+Ex_1.
+
+Reading the Data From the File Both in (Synchronously & Asynchronously).
+
+1.readFileSync( - , - )
+    - used to read the data from Synchronously.
+
+2. readFile(-,-)
+    - used to read the data from file Asynchronously.
+    - Asynchronous operations called as non-blocking operations.
+
+Ex.
+    fs.readFile("sample.txt",function(err,data){
+        if(err)
+            thwow err
+        console.log(data.toString());    
+    });
+
+
+
+
+
+
+
+

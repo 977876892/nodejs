@@ -1,0 +1,10 @@
+{
+  "name": "nareshit",
+  "version": "1.0.0",
+  "description": "Basic Routing Example",
+  "dependencies": {
+    "express": "4.15.3",
+    "mongodb": "^2.2.29",
+    "mysql": "2.13.0"
+  }
+}

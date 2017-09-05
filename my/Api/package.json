@@ -1,0 +1,9 @@
+{
+    "name":"nareshit",
+    "version": "1.0.0",
+    "description": "Creating the API",
+    "dependencies": {
+        "express":"4.15.3",
+        "node-rest-client":"3.1.0"
+    }
+}

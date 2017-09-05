@@ -1,0 +1,9 @@
+{
+    "name": "sai",
+    "version": "1.0.0",
+    "description": "hello",
+    "dependencies": {
+        "express": "4.15.3",
+        "mysql": "2.13.0"
+    }
+}

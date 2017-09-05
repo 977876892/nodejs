@@ -1,0 +1,9 @@
+{
+    "name":"nareshit",
+    "version":"1.0.0",
+    "description": "reading the post parameters",
+    "dependencies": {
+        "express": "4.15.3",
+        "body-parser": "1.17.2"
+    }
+}

@@ -1,0 +1,162 @@
+express.
+    - this module is the 3rd party module.
+
+    - we can download this module with the help of "npm" or "yarn"
+
+    - express module used to develop the Rest API in nodeJS.
+
+    - express module supports the Single Page Applications.
+
+    - expess module supports "Routing"
+
+ package.json
+ -
+ {
+     "name":"nareshit",
+     "version":"1.0.0",
+     "description":"downloading the express module",
+     "dependencies":{
+         "expess":"^4.15.3"
+     }
+ }
+
+>npm install
+
+[ Automatically express module will download in "node_modules" folder]
+
+
+Example_1
+-
+    Launch the html page as Default page With Node Server (index.html). 
+
+
+-----------------
+DefaultExpress   
+        package.json (Configuration File to Download Express)
+        index.html   (Default Page)
+        server.js    (Node Application)
+------------------
+
+server.js
+-
+
+//import express
+var expess = require("expess");
+//create the server
+var app = expess();
+//Deploy the Application.
+app.use(expess.static(__dirname+"/../DefaultExpress"));
+//Default Output.
+app.get("/",function(req,res){
+    res.redirect("/index.html");
+});
+//Assign the Port No.
+app.use(8080);
+console.log("Server Listening the Port No.8080");
+
+
+[Note . Node Engine By Default launches "index.html" file]
+
+
+Example_2.
+    Create the Following API
+
+http://localhost:8080/         --- //index.html
+http://localhost:8080/routing  --- //Routing Example Soon.....
+http://localhost:8080/mysql    --- //Data From MySQL DB Soon....
+http://localhost:8080/mongodb  --- //Data From MongoDB Soon....
+http://localhost:8080/orm      --- // Common Queries for all databases
+
+
+Example_3.
+
+index.html
+-
+<form action="http://localhost:8080/login" method="GET">
+    <label>Uname.</label>
+    <input type="text" name="uname">
+    <br><br>
+    <label>Upwd.</label>
+    <input type="password" name="upwd">
+    <br><br>
+    <input type="submit">
+</form>
+
+server.js
+-
+app.get("/login",function(req,res){
+    var uname = req.query.uname;   //query - used to read the GET Parameters
+    var upwd = req.query.upwd;
+    if(uname=="admin" && upwd="admin"){
+        console.log("Login Success !");
+    }else{
+        console.log("Login Fail !");
+    }
+});
+
+
+Example_4.
+    Read the Post Parameters
+    - we have a predefined property called as "body" in "body-parser" module.
+    - body property used to read the post parameters
+
+Ex.
+
+package.json
+-
+dependencies:{
+    "expess":"4.15.3",    // used to develop the REST API
+    "body-parser":"1.7.9" // used to set the MIME Type , it contains "body" property
+}
+
+index.html
+-
+<form action="http://localhost:8080/login method="POST">
+    <label>Uname</label>
+    <input type="text" name="uname">
+    <label>Upwd</label>
+    <input type="password" name="upwd">
+    <input type="submit">
+</form>
+
+server.js
+-
+var express = require("expess");
+var bodyparser = require("body-parser");
+var app = expess();
+//hide the URL
+app.use(bodyparser.urlencoded({extended:false}));
+//set the MIME Type
+app.use(bodyparser.json());
+app.post("/login",function(req,res){
+    response={
+        "uname" : req.body.uname,
+        "upwd"  : req.body.upwd
+    }
+    res.send(response);
+});
+
+
+*****************************
+GET method using(query)
+
+http://localhost:8080/search?uname=admin&upwd=admin
+var uname = req.query.uname;
+var upwd = req.query.upwd;
+
+
+POST method using(body)
+
+http://localhost:8080/search
+var uname = req.body.uname;
+var upwd = req.body.upwd;
+
+SEARCH,DELETE method using(params)
+
+http://localhost:8080/1/hello/true
+app.get("/:id/:name/:position",function(req,res){
+	var id  = req.params.id;
+	var name = req.params.name;
+	var position = req.params.position;
+});	
+		*************************************

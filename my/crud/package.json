@@ -1,0 +1,8 @@
+{
+    "name":"nareshit",
+    "version": "1.0.0",
+    "description": "CRUD Operations on JSON",
+    "dependencies": {
+        "express": "4.15.3"
+    }
+}

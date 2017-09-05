@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+
+    <input type="text" ng-model="uname"><br><br>
+    <input type="password" ng-model="upwd"><br><br>
+
+    <button ng-click="login(uname,upwd)">Login</button>
+
+    <br><br>
+
+    <h1>{{res}}</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        app.module("app",[]).controller("ctrl",function($scope,$http){
+            $scope.login =function(uname,upwd){
+                $http.get("http://localhost:8080?uname="+uname+"&upwd="+upwd).then(function(posRes){
+                    $scope.res =posRes.data;
+                },function(errRes){
+                    $scope.res=errRes;
+                });
+            }
+        });    
+    </script>
+
+
+</html>

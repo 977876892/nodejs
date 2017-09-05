@@ -1,0 +1,59 @@
+MongoDB.
+
+	- MongoDB is the ligth weigth DataBase Supports JSON.
+	- As a Mongo Developer , we can Perform CRUD Operations on JSON.
+	- MongoDB Follows the Client Server Architecture.
+
+Start the Server.
+-
+
+>mongod
+	- the above operable program used to start the Mongo Server.
+	- in general mongoserver listening the Port No.27017.
+	- mongo server follows the "mongo" protocol.
+
+	Ex.
+		mongo://localhost:27017 
+
+
+Create the Client
+-
+>mongo
+	- MongoClient Can Connect to Mongo Server.
+
+
+MongoDB Opearations
+-
+1. show dbs;
+	- it will show the available databases in mongodb.
+
+2. use demo;
+	- it will create and switches to demo database.
+
+3. db.dropDatabase();
+	- it will drop the database.(Current DataBase)
+
+4. db.createCollection("emp");
+	- emp collection will be created in mongodb.
+
+5. db.emp.insert({'id':1,'name':'Hello_1','age':20});	
+	- insert the JSON Object into collection.
+
+6. db.emp.find();
+	- We can Fetch the data from the Collection (emp)
+
+7.db.emp.remove({});
+     -remove a document from the collection.
+
+8.show collections
+     -You can check the created collection by using the command show collections.
+	
+9.db.mycollection.drop()
+    -MongoDB's db.collection.drop() is used to drop a collection from the database.
+
+10. db.emp.update({'id':1},{$set:{'name':'Hero','age':20}});
+
+
+
+
+

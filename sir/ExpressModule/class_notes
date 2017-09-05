@@ -1,0 +1,21 @@
+//express
+1. express is the thrid party module.
+2. express module used to develope the web services.
+3. we can download the thrid party modules by using npm.
+
+package.json
+-
+{
+    "name":"my_prokect",
+    "version":"1.0.0",
+    "description":"express module demo",
+    "dependencies":{
+        "express":"~4.15.3"
+    }
+}
+
+>npm install
+
+- when ever we install the "package.json" , automatically "node_modules" folder created
+
+- this folder contain modules.

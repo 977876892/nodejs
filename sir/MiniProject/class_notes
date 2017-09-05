@@ -1,0 +1,42 @@
+Step 1.
+    Download ui.router Module by using bower.
+
+Step 2.
+    Add the ui.router Module Dependency. 
+
+Step 3.
+    Create the Target Templates  
+
+Step 4.         
+    Create the Controllers
+
+Step 5.
+    Do the Mapping
+
+Ex.
+    [login.html
+      loginController]
+
+    [home.html
+     homeController] 
+
+ - Mapping Should done before launching the Angular Application.
+   (constructor) 
+   //app.config(config) 
+
+ - To do the Mapping ANgular Framework provides Predefined Objects.
+    - $stateProvider
+    - $urlRouterProvider
+
+ - Mapping Should Done in the form of a "key&value" pairs.
+
+    login   ----->  login.html & loginController
+    home    ----->  home.html & homeController   
+
+
+Step 6.
+    Create the Source Template.
+
+ Ex. 
+
+ index.html       

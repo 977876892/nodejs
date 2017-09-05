@@ -1,0 +1,8 @@
+{
+    "name":"hello",
+    "version":"1.0.0",
+    "description":"downloading the express module",
+    "dependencies":{
+        "express":""
+    }
+}

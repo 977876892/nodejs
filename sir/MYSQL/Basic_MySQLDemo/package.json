@@ -1,0 +1,9 @@
+{
+    "name":"nareshit",
+    "version": "1.0.0",
+    "description": "Basic MySQL Demo",
+    "dependencies": {
+        "express":"4.15.3",
+        "mysql": "2.13.0"
+    }
+}

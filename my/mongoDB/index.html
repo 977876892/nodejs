@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="angular.min.js"></script>
+        
+        <script>
+            var app=angular.module("myapp",[]);
+            app.controller("demo",function($scope,demoser){
+                demoser.node().then(function(res){
+                    $scope.items=res.data;
+                });
+            });
+        </script>
+        <script src="service.js"></script>
+    </head>
+<body ng-app="myapp" ng-controller="demo">
+    <table border="1">
+        <tr>
+            <td ng-repeat="item in items">{{item}}</td>
+        </tr>
+    </table>
+</body>
+</html>
