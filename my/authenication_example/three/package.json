@@ -1,0 +1,9 @@
+{
+    "name": "dummy",
+    "version": "1.0.0",
+    "description": "hello world",
+    "dependencies": {
+        "jwt-simple": "0.5.1",
+        "express": "4.16.2"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "sai",
+    "description": "hello",
+    "version": "1.0.0",
+    "dependencies": {
+        "express": "4.16.2",
+        "my-sql": "1.2.15",
+        "body-parser": "1.18.2",
+        "express-fileupload": "^0.1.1"
+    }
+}

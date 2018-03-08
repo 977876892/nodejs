@@ -19,7 +19,7 @@ app.get("/products",function(req,res){
             res.send(array);
         });
     });
-});
+}); 
 
 
 app.post("/insert",function(req,res){
