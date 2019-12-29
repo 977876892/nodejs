@@ -9,7 +9,7 @@ var conn=mysql.createConnection({
     "host":"localhost",
     "user":"root",
     "password":"",
-    "database":"sai"
+    "database":"test"
 })
 
 conn.connect();
