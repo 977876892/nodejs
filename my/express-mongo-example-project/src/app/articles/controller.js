@@ -40,3 +40,4 @@ exports.detail = async ( req, res ) => {
         res.send( err );
     }
 };
+
