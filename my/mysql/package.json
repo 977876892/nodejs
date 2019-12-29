@@ -4,6 +4,6 @@
     "description": "hello",
     "dependencies": {
         "express": "4.15.3",
-        "mysql": "2.13.0"
+        "mysql": "2.17.1"
     }
 }
